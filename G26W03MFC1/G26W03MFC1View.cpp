@@ -1,5 +1,4 @@
-﻿
-// G26W03MFC1View.cpp: CG26W03MFC1View 클래스의 구현
+﻿// G26W03MFC1View.cpp: CG26W03MFC1View 클래스의 구현
 //
 
 #include "pch.h"

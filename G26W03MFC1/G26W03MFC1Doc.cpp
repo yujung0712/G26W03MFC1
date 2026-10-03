@@ -1,5 +1,4 @@
-﻿
-// G26W03MFC1Doc.cpp: CG26W03MFC1Doc 클래스의 구현
+﻿// G26W03MFC1Doc.cpp: CG26W03MFC1Doc 클래스의 구현
 //
 
 #include "pch.h"
@@ -60,10 +59,12 @@ void CG26W03MFC1Doc::Serialize(CArchive& ar)
 	if (ar.IsStoring())
 	{
 		// TODO: 여기에 저장 코드를 추가합니다.
+		ar << Point;
 	}
 	else
 	{
 		// TODO: 여기에 로딩 코드를 추가합니다.
+		ar >> Point;
 	}
 }
 
@@ -78,7 +79,7 @@ void CG26W03MFC1Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 	CString strText = _T("TODO: implement thumbnail drawing here");
 	LOGFONT lf;
 
-	CFont* pDefaultGUIFont = CFont::FromHandle((HFONT) GetStockObject(DEFAULT_GUI_FONT));
+	CFont* pDefaultGUIFont = CFont::FromHandle((HFONT)GetStockObject(DEFAULT_GUI_FONT));
 	pDefaultGUIFont->GetLogFont(&lf);
 	lf.lfHeight = 36;
 
@@ -109,7 +110,7 @@ void CG26W03MFC1Doc::SetSearchContent(const CString& value)
 	}
 	else
 	{
-		CMFCFilterChunkValueImpl *pChunk = nullptr;
+		CMFCFilterChunkValueImpl* pChunk = nullptr;
 		ATLTRY(pChunk = new CMFCFilterChunkValueImpl);
 		if (pChunk != nullptr)
 		{
